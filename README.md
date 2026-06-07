@@ -53,4 +53,4 @@ Tracker helps you take control of your daily expenses, monitor your recurring su
 
 ## 📜 License
 This project is open-source and available under the MIT License.
-        
+         
