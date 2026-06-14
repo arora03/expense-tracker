@@ -94,22 +94,6 @@ export default function SquirrelTour() {
       showProgress
       showSkipButton
       callback={handleJoyrideCallback}
-      styles={{
-        options: {
-          primaryColor: '#8b5cf6', // purple-500
-          zIndex: 10000,
-        },
-        tooltipContainer: {
-          textAlign: 'left'
-        },
-        buttonNext: {
-          borderRadius: '9999px',
-          padding: '8px 16px',
-        },
-        buttonBack: {
-          marginRight: 8,
-        }
-      }}
     />
   );
 }
