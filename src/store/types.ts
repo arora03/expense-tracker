@@ -49,11 +49,15 @@ export interface AppState {
 
   userName: string | null;
   hasCompletedOnboarding: boolean;
-  setUserName: (name: string) => void;
-  completeOnboarding: () => void;
-  initStore: () => Promise<void>;
+  hasCompletedTour: boolean;
   
-  addExpense: (expense: Omit<Expense, "id">) => void;
+  // Actions
+  initStore: () => Promise<void>;
+  setUserName: (name: string) => Promise<void>;
+  completeOnboarding: () => Promise<void>;
+  completeTour: () => void;
+  
+  addExpense: (expense: Omit<Expense, 'id'>) => Promise<void>;
   deleteExpense: (id: string) => void;
   addCategory: (category: Omit<Category, "id">) => void;
   updateCategory: (id: string, category: Partial<Omit<Category, "id">>) => void;

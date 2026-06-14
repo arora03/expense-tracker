@@ -12,6 +12,8 @@ import { OnboardingModal } from './components/OnboardingModal';
 import { useStore } from './store/useStore';
 import { useEffect } from 'react';
 
+import SquirrelTour from './components/SquirrelTour';
+
 function App() {
   useSmartReminder();
   const initStore = useStore(state => state.initStore);
@@ -23,6 +25,7 @@ function App() {
   return (
     <Router>
       <OnboardingModal />
+      <SquirrelTour />
       <Layout>
         <Routes>
           <Route path="/" element={<Navigate to="/dashboard" replace />} />

@@ -54,6 +54,7 @@ export const useStore = create<AppState>()(
       goals: [],
       userName: null,
       hasCompletedOnboarding: false,
+      hasCompletedTour: false,
 
       initStore: async () => {
         const deviceId = localStorage.getItem('device_id');
@@ -120,6 +121,8 @@ export const useStore = create<AppState>()(
         set({ hasCompletedOnboarding: true });
         await getOrCreateUser(get().userName);
       },
+
+      completeTour: () => set({ hasCompletedTour: true }),
 
       addExpense: async (expense) => {
         const id = crypto.randomUUID();

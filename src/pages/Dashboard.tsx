@@ -39,7 +39,7 @@ export default function Dashboard() {
         </div>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 tour-dashboard-stats">
         <Card className="border-none shadow-sm bg-gradient-to-br from-card to-card/50 relative overflow-hidden">
           <div className="absolute top-0 right-0 p-4 opacity-10">
             <Wallet size={80} />
@@ -66,7 +66,7 @@ export default function Dashboard() {
           </CardContent>
         </Card>
 
-        <Card className="border-none shadow-sm relative overflow-hidden bg-gradient-to-br from-amber-500/10 to-orange-500/5 border border-orange-500/20">
+        <Card className="border-none shadow-sm relative overflow-hidden bg-gradient-to-br from-amber-500/10 to-orange-500/5 border border-orange-500/20 tour-electricity">
           <div className="absolute top-0 right-0 p-4 opacity-10 text-orange-500">
             <Zap size={80} />
           </div>

@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="flex h-screen w-full bg-background overflow-hidden text-foreground">
       {/* Sidebar (Desktop) */}
-      <aside className="hidden md:flex flex-col w-64 border-r border-border bg-card/50 backdrop-blur">
+      <aside className="hidden md:flex flex-col w-64 border-r border-border bg-card/50 backdrop-blur tour-sidebar">
         <div className="p-6">
           <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Tracker.
