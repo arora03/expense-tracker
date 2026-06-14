@@ -56,6 +56,8 @@ export interface AppState {
   setUserName: (name: string) => Promise<void>;
   completeOnboarding: () => Promise<void>;
   completeTour: () => void;
+  signOut: () => void;
+  deleteAccount: () => Promise<void>;
   
   addExpense: (expense: Omit<Expense, 'id'>) => Promise<void>;
   deleteExpense: (id: string) => void;

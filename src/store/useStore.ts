@@ -124,6 +124,31 @@ export const useStore = create<AppState>()(
 
       completeTour: () => set({ hasCompletedTour: true }),
 
+      signOut: () => {
+        localStorage.removeItem('device_id');
+        set({
+          expenses: [],
+          categories: [],
+          electricityBalance: 0,
+          dailyElectricityConsumption: 0,
+          electricityRecharges: [],
+          lastElectricityDeduction: null,
+          subscriptions: [],
+          goals: [],
+          userName: null,
+          hasCompletedOnboarding: false,
+          hasCompletedTour: false,
+        });
+      },
+
+      deleteAccount: async () => {
+        const deviceId = localStorage.getItem('device_id');
+        if (deviceId) {
+          await supabase.from('users').delete().eq('id', deviceId);
+        }
+        get().signOut();
+      },
+
       addExpense: async (expense) => {
         const id = crypto.randomUUID();
         set((state) => ({

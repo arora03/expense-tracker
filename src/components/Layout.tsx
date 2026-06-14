@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Wallet, Zap, BarChart, CalendarDays, Target } from 'lucide-react';
+import { LayoutDashboard, Wallet, Zap, BarChart, CalendarDays, Target, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
@@ -11,6 +11,7 @@ const navItems = [
   { name: 'Goals', path: '/goals', icon: Target },
   { name: 'Electricity', path: '/electricity', icon: Zap },
   { name: 'Analytics', path: '/analytics', icon: BarChart },
+  { name: 'Profile', path: '/profile', icon: User },
 ];
 
 export default function Layout({ children }: { children: ReactNode }) {

@@ -6,6 +6,7 @@ import Electricity from './pages/Electricity';
 import Analytics from './pages/Analytics';
 import Subscriptions from './pages/Subscriptions';
 import Goals from './pages/Goals';
+import Profile from './pages/Profile';
 import { Toaster } from 'sonner';
 import { useSmartReminder } from './hooks/useSmartReminder';
 import { OnboardingModal } from './components/OnboardingModal';
@@ -35,6 +36,7 @@ function App() {
           <Route path="/goals" element={<Goals />} />
           <Route path="/electricity" element={<Electricity />} />
           <Route path="/analytics" element={<Analytics />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </Layout>
       <Toaster position="top-center" />
