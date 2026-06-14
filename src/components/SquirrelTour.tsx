@@ -91,9 +91,7 @@ export default function SquirrelTour() {
       run={run}
       continuous
       scrollToFirstStep
-      showProgress
-      showSkipButton
-      callback={handleJoyrideCallback}
+      onEvent={handleJoyrideCallback}
     />
   );
 }
