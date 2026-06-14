@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import Joyride, { CallBackProps, STATUS, Step } from 'react-joyride';
+import { Joyride, STATUS } from 'react-joyride';
+import type { Step } from 'react-joyride';
 import { useStore } from '@/store/useStore';
 
 export default function SquirrelTour() {
@@ -17,7 +18,7 @@ export default function SquirrelTour() {
     }
   }, [hasCompletedOnboarding, hasCompletedTour]);
 
-  const handleJoyrideCallback = (data: CallBackProps) => {
+  const handleJoyrideCallback = (data: any) => {
     const { status } = data;
     const finishedStatuses: string[] = [STATUS.FINISHED, STATUS.SKIPPED];
     if (finishedStatuses.includes(status)) {
@@ -39,7 +40,6 @@ export default function SquirrelTour() {
           </p>
         </div>
       ),
-      disableBeacon: true,
     },
     {
       target: '.tour-sidebar',
