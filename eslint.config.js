@@ -20,3 +20,5 @@ export default defineConfig([
     },
   },
 ])
+
+// Configured for strict type checking
