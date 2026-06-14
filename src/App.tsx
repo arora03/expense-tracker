@@ -40,3 +40,5 @@ function App() {
 }
 
 export default App;
+
+// Finalized application structure
